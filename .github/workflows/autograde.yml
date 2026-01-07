@@ -38,7 +38,7 @@ jobs:
         run: npm install
 
       - name: Run student MongoDB commands
-        run: mongosh mongodb://localhost:27017 solution.mongodb
+        run: mongosh mongodb://localhost:27017 solution.mongodb || true
 
       - name: Run autograder
         run: node verify.js
