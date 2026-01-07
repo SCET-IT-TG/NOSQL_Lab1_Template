@@ -1,4 +1,4 @@
-name: MongoDB Classroom Autograding
+name: MongoDB Shell Autograding
 
 on: [push]
 
@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run student solution
-        run: node solution.js
+      - name: Run student MongoDB commands
+        run: mongosh mongodb://localhost:27017 solution.mongodb
 
       - name: Run autograder
         run: node verify.js
